@@ -9,6 +9,10 @@
     --c1: #ffffff;
     --c2: #1e1d1db2;
     --c3: #b5b5b54f;
+    --c4: #582e2e;
+    --c5: #4b0909;
+    --c6: #294e2d;
+    --c7: #033300;
 }
 
 .login-main {
@@ -102,6 +106,7 @@
 .login__content__login-password img {
     position: absolute;
     right: 5px;
+    cursor: pointer;
 }
 
 .login__content-login label {
@@ -131,7 +136,6 @@ input:checked ~ .login-main {
 input:checked ~ main {
     display: block;
 }
-
 
 .main {
     position: relative;
@@ -181,29 +185,30 @@ input:checked ~ main {
     display: none;
 }
 
-.homeworks__container {
+#homeworks:checked ~ .app__container,
+#notes:checked ~ .app__container,
+#weather:checked ~ .app__container {
+    display: block;
+}
+
+.app__container {
     display: none;
     position: absolute;
-    width: 1000px;
-    height: 800px;
+    width: 80%;
+    height: 85%;
     background-color: #111;
-    left: 25%;
+    left: 10%;
     top: 6%;
     z-index: 2000;
     border-radius: 10px;
 }
 
-.homeworks__container-content {
+.app__container-content {
     width: 100%;
     height: 100%;
-    padding: 10px 20px;
 }
 
-#homeworks:checked ~ section {
-    display: block;
-}
-
-.homeworks__container-nav {
+.app__container-nav {
     height: 40px;
     border-bottom: 1px solid #ffffff;
     display: flex;
@@ -211,49 +216,91 @@ input:checked ~ main {
     padding: 5px;
 }
 
-.homeworks__container-nav label {
+.app__container-nav label {
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
 
-.homeworks__container-nav label svg:hover {
+.app__container-nav label svg:hover {
     fill: #7a7a7a;
 }
 
-.homeworks__container-nav label svg {
+.app__container-nav label svg {
     width: 100%;
     height: 100%;
     fill: #ffffff;
 }
 
 /* Homeworks */
-.homeworks-main{
+.homeworks-main {
     color: #ffffff;
-    padding: 20px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    
+    font-family: Verdana, sans-serif;
 }
 
-.homeworks-main ul{
+.homeworks-main h1 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    color: #fff3b8;
+}
+
+.homeworks-main__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.homeworks-main__card {
+    padding: 20px;
+    border-radius: 25px;
+    min-width: 320px;
+    max-width: 380px;
+}
+
+.homeworks-main__card h2 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.homeworks-main__todo {
+    background-color: var(--c4);
+}
+
+.homeworks-main__todo h2 {
+    color: var(--c5);
+}
+
+.homeworks-main__done {
+    background-color: var(--c6);
+}
+
+.homeworks-main__done h2 {
+    color: var(--c7);
+}
+
+.homeworks-main__card h2 span {
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+.homeworks-main__card ul {
     list-style: none;
-    
-
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
-.homeworks__personal{
-    margin-top: 60px;
+.homeworks-main__card label {
+    font-size: 13px;
 }
-
-.homeworks__complete{
-    margin-top: 60px;
-    margin-left: -141px;
-}
-
-
 
 /* Notes */
 
