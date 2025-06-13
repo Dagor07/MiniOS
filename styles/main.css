@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --c1: #ffffff;
+    --c2: #1e1d1db2;
+    --c3: #b5b5b54f;
+}
+
+.login-main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    font-family: Verdana, sans-serif;
+}
+
+.login__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+
+.login__background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.login__mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c2);
+    z-index: 100;
+}
+
+.login__content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+
+.login__content-login {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+
+.login__content__login-user {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--c3);
+}
+
+.login__content__login-user img {
+    width: 100%;
+    height: 100%;
+}
+
+.login__content-login h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px #424141;
+}
+
+.login__content__login-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 200px
+}
+
+.login__content__login-password input {
+    position: absolute;
+    background-color: var(--c3);
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login__content__login-password img {
+    position: absolute;
+    right: 5px;
+}
+
+.login__content-login label {
+    margin-top: 25px;
+    padding: 10px 20px;
+    width: 110px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    background-color: #bdbdbd52;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login {
+    display: none;
+}
+
+.login__content-login label:hover {
+    background-color: #bdbdbd6b;
+}
+
+input:checked ~ .login-main {
+    display: none;
+}
+
+input:checked ~ main {
+    display: block;
+}
+
+
+.main {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+}
+
+.menu__icons {
+    width: 60%;
+    background-color: #000000a3;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.menu__icons ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px 20px;
+    color: #9999b7;
+}
+
+.menu__icons li:hover {
+    color: #ffffff;
+}
+
+.menu__icons li label {
+    cursor: pointer;
+    padding: 5px;
+}
+
+#homeworks,
+#notes,
+#weather {
+    display: none;
+}
+
+.homeworks__container {
+    display: none;
+    position: absolute;
+    width: 1000px;
+    height: 800px;
+    background-color: #111;
+    left: 25%;
+    top: 6%;
+    z-index: 2000;
+    border-radius: 10px;
+}
+
+.homeworks__container-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+#homeworks:checked ~ section {
+    display: block;
+}
+
+.homeworks__container-nav {
+    height: 40px;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+}
+
+.homeworks__container-nav label {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.homeworks__container-nav label svg:hover {
+    fill: #7a7a7a;
+}
+
+.homeworks__container-nav label svg {
+    width: 100%;
+    height: 100%;
+    fill: #ffffff;
+}
+
+/* Homeworks */
+.homeworks-main{
+    color: #ffffff;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.homeworks-main ul{
+    list-style: none;
+    
+
+}
+
+.homeworks__personal{
+    margin-top: 60px;
+}
+
+.homeworks__complete{
+    margin-top: 60px;
+    margin-left: -141px;
+}
+
+
+
+/* Notes */
+
+/* Weather */
