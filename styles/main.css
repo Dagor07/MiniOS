@@ -305,3 +305,32 @@ input:checked ~ main {
 /* Notes */
 
 /* Weather */
+.app__container-weather{
+    background-image: url(../img/weather.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.body-weather{
+    height: 94.5vh;
+
+}
+
+.container h1,h2,h3{
+    color: var(--c1);
+}
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    
+}
+
